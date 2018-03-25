@@ -5,8 +5,9 @@ header {
     background-color: #5c755e;
 	color: black;
 	margin: 10px;
-	padding: 10px;
+	padding: 20px;
 	border-radius: 5px;
+	height:90px; 
 }
 p {
     color: black;
@@ -20,12 +21,11 @@ nav {
     background-color: #5c755e;
 	color: black;
 	margin: 10px;
-	padding: 10px;
+	padding: 20px;
 	border-radius: 5px;
+	height:90px;
 	
-legend {
-	color:black;
-}
+
 section {
     background-color: #5c755e;
 	color: black;
