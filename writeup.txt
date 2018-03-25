@@ -1,0 +1,5 @@
+This is just general thoughts
+- ensured that html5 is semantic
+- double space instead of tab spacing for webpage
+- included width metadata for phones tablets 
+- 
