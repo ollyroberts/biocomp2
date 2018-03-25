@@ -1,0 +1,23 @@
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: black;
+	padding: 30px
+}
+p {
+    color: black;
+	padding: 30px
+}
+label {
+	color:black;
+}
+nav {
+	color:black;
+}
+legend {
+	color:black;
+}
+section {
+	border: 1px solid powderblue
+}
