@@ -1,8 +1,9 @@
 body {
     background-color: powderblue;
 }
-h1 {
-    color: black;
+header {
+    background-color: white;
+	color: black;
 	padding: 30px
 }
 p {
