@@ -2,4 +2,11 @@ This is just general thoughts
 - ensured that html5 is semantic
 - double space instead of tab spacing for webpage
 - included width metadata for phones tablets 
-- 
+- 25.03.2018
+	- decided to try to use CSS flexobx to organise layout as 
+		- table is a inflexible bad way of doing it
+		-frameworks like bootstrap are as good for learning how to make
+		a webpage
+		-css floats are not very flexible 
+	- found flexbox could only align in columns 
+	- decided to attempt css grid as it allows 2d layout
