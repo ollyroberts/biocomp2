@@ -7,17 +7,21 @@ h1 {
 }
 p {
     color: black;
-	padding: 30px
+	padding: 30px;
+	border: 1px black;
 }
 label {
 	color:black;
 }
 nav {
 	color:black;
+	padding:30px;
+	border: 1px black;
 }
 legend {
 	color:black;
 }
 section {
-	border: 1px solid powderblue
+	border: 1px solid powderblue;
+	border: 1px black;
 }
