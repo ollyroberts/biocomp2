@@ -1,0 +1,115 @@
+changelog
+creator Olly
+v 1.0 created 
+
+v 1.1 02/04/2018
+ -updated requirements for pages and defined what from the db layer
+
+
+----------------------------------------------------------------------
+1.1 What I can pick from 
+----------------------------------------------------------------------
+
+- name (chromosome table)
+- source (chromosome table) #species?
+
+
+-accession_num (accession table)
+
+- whole_seq (locus table)
+- chr_location (locus table)
+- locus_name (locus table)
+- chr_name (locus table) #will always be 16
+
+- gene_name (cds table)
+- product_name (cds table)
+- product_id (cds table) 
+- seq_location (cds table)
+- whole_seq (cds table)
+- translation (cds table)
+
+- codon (codon_usage table)
+- frequency_100 (codon_usage table)
+- ratio_aa (codon_usage table)
+- amino_acid (codon_usage table)
+
+- name (restriction_enzyme table)
+- recogn_seq (restriction_enzyme table)
+
+- start_position (restriction_sites) 
+
+
+--------------------------------------------------------------------
+1.2 Different page types 
+--------------------------------------------------------------------
+ _ _ _ _ _ _ _ _ _ _ _
+|                    |
+| protein/gene page  |
+|_ _ _ _ _  _ _ _ _ _|
+# = not found in database layer. result of middle layer
+
+- name (chromosome table)
+- source (chromosome table) 
+
+- chr_location (locus table)
+-accession_num (accession table)
+
+- gene_name (cds table)
+- product_id (cds table)
+- product_name (cds table) # if there is one
+- translation (cds table)
+- seq_location (cds table)
+
+
+- whole_seq (cds table)
+
+# - table containing collums of 
+# - codons, frequency_100. that codons aa (covers multiple codons that make the same aa), ratio_aa
+
+if the option of a known restriction enzyme is selected
+
+ - name (restriction_enzyme table)
+ - recogn_seq (restriction_enzyme table)
+
+I realize I was misunderstanding how sticky ends work. 
+If I could get the locations of restriction_sites within the 
+-	whole sequence
+# -	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
+	but none within the cds. indicating it is useful for cutting the genes
+
+ _ _ _ _ _ _ _ _ _ _ _
+|                    |
+| Accession  |
+|_ _ _ _ _  _ _ _ _ _|
+
+Accession number: 
+- is simply the segment of dna as it was categorized and uploaded
+- it can contain multiple cds, genes and proteins 
+- [0] [1] indicates each grouping
+
+a1)location 
+a2) primary accession
+
+b1)gene id [0]
+b2)protein ID [0]
+b3)translation seq [0]
+cds range e.g 1-201 [0]
+coding sequence [0]
+
+gene id [1]
+
+protein ID [1]
+protein name [1]
+translation seq [1]
+cds range e.g 1-201 [1]
+coding sequence [1]
+
+gene id [2]
+
+protein ID [2]
+protein name [2]
+translation seq [2]
+cds range e.g 1-201 [2]
+coding sequence [2]
+
+
