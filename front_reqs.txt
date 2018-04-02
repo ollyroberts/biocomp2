@@ -1,0 +1,45 @@
+
+
+possible entires 
+- Loccus id 
+- chr location 
+- chromosome 
+- codon usage
+cds
+- gene name  
+- product name 
+- product ID
+- seq location
+- whole_seq 
+- translation 
+- complementary enumber
+
+restriction sites
+- start position
+- end position 
+restiriction enzyme 
+- recongition seq
+- gene_name
+
+  
+
+
+What can be computed by pages 
+- coding and non coding region
+- codon ratiors 
+
+
+Different page types 
+
+protein/gene 
+-gene id
+-gene name
+-cds region [eg 1-201]
+
+
+accession
+
+location
+
+possible additions
+- alternative gene names 
