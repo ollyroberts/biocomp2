@@ -70,8 +70,10 @@ if the option of a known restriction enzyme is selected
 
  - name (restriction_enzyme table)
  - recogn_seq (restriction_enzyme table)
+ - start_position (restriction_sites)
+ - ehd_position (restriction_sites)
 
-I realize I was misunderstanding how sticky ends work. 
+I realize I was misunderstanding how restrictionb sites work. 
 If I could get the locations of restriction_sites within the 
 -	whole sequence
 # -	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
