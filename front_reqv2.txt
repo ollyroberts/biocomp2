@@ -48,35 +48,39 @@ v 1.1 02/04/2018
 |_ _ _ _ _  _ _ _ _ _|
 # = not found in database layer. result of middle layer
 
-- name (chromosome table)
-- source (chromosome table) 
+a1) name (chromosome table)
+a2) source (chromosome table) 
+a3) chr_location (locus table)
+a4) accession_num (accession table)
 
-- chr_location (locus table)
--accession_num (accession table)
+b1) gene_name (cds table)
+b2) product_id (cds table)
+b3) product_name (cds table) # if there is one
+b4) translation (cds table)
+b5) seq_location (cds table) # if we could get a database entry 
+that contains the start and end points of a cds 
+		
 
-- gene_name (cds table)
-- product_id (cds table)
-- product_name (cds table) # if there is one
-- translation (cds table)
-- seq_location (cds table)
+# information of each codon information from the middle layer/db
+c1) codon (codon_usage table)
+c2) frequency_100 (codon_usage table)
+c3) ratio_aa (codon_usage table)
+c4) amino_acid (codon_usage table)
 
 
-- whole_seq (cds table)
+if the option of a known restriction enzyme is selected from DB
 
-# - table containing collums of 
-# - codons, frequency_100. that codons aa (covers multiple codons that make the same aa), ratio_aa
+d1) name (restriction_enzyme table)
+d2) recogn_seq (restriction_enzyme table)
+d3) start_position (restriction_sites)
+d4) ehd_position (restriction_sites)
 
-if the option of a known restriction enzyme is selected
+# from middle layer
 
- - name (restriction_enzyme table)
- - recogn_seq (restriction_enzyme table)
- - start_position (restriction_sites)
- - ehd_position (restriction_sites)
-
-I realize I was misunderstanding how restrictionb sites work. 
 If I could get the locations of restriction_sites within the 
--	whole sequence
-# -	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
+e1)	whole_seq (cds table) # or 100bp upstream and downstream 
+of cds if start and end of cds is known
+e2)	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
 	but none within the cds. indicating it is useful for cutting the genes
 
  _ _ _ _ _ _ _ _ _ _ _
@@ -87,31 +91,96 @@ If I could get the locations of restriction_sites within the
 Accession number: 
 - is simply the segment of dna as it was categorized and uploaded
 - it can contain multiple cds, genes and proteins 
-- [0] [1] indicates each grouping
+- [0], [1] indicates each grouping of gene/protein
 
-a1)location 
+a1) location 
+a2) chromosome
 a2) primary accession
 
-b1)gene id [0]
-b2)protein ID [0]
-b3)translation seq [0]
-cds range e.g 1-201 [0]
-coding sequence [0]
+b1) gene id [0]
+b2) protein ID [0]
+b3) translation seq [0]
+b4) cds range e.g 1-201 [0]
+b5) coding sequence [0]
 
-gene id [1]
+c1) gene id [1]
+c2) protein ID [1]
+c3) translation seq [1]
+c4) cds range e.g 1-201 [1]
+c5) coding sequence [1]
 
-protein ID [1]
-protein name [1]
-translation seq [1]
-cds range e.g 1-201 [1]
-coding sequence [1]
-
-gene id [2]
-
-protein ID [2]
-protein name [2]
-translation seq [2]
-cds range e.g 1-201 [2]
-coding sequence [2]
+d1) gene id [2]
+d2) protein ID [2]
+d3) translation seq [2]
+d4) cds range e.g 1-201 [2]
+d5) coding sequence [2]
 
 
+# information of each codon information from the middle layer/db
+e1) codon (codon_usage table)
+e2) frequency_100 (codon_usage table)
+e3) ratio_aa (codon_usage table)
+e4) amino_acid (codon_usage table)
+
+
+if the option of a known restriction enzyme is selected from DB
+
+f1) name (restriction_enzyme table)
+f2) recogn_seq (restriction_enzyme table)
+f3) start_position (restriction_sites)
+f4) ehd_position (restriction_sites)
+
+# from middle layer
+
+g1) whole_seq (cds table) with locations of restriction_sites
+g2)	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
+	but none within the cds. indicating it is useful for cutting the genes
+
+
+ _ _ _ _ _ _ _ _ _ _ _
+|                    |
+| Location		     |
+|_ _ _ _ _  _ _ _ _ _|
+- same requirements as accession
+- is often in the form map = xxxx
+
+a1) location 
+a2) chromosome
+a2) primary accession
+
+b1) gene id [0]
+b2) protein ID [0]
+b3) translation seq [0]
+b4) cds range e.g 1-201 [0]
+b5) coding sequence [0]
+
+c1) gene id [1]
+c2) protein ID [1]
+c3) translation seq [1]
+c4) cds range e.g 1-201 [1]
+c5) coding sequence [1]
+
+d1) gene id [2]
+d2) protein ID [2]
+d3) translation seq [2]
+d4) cds range e.g 1-201 [2]
+d5) coding sequence [2]
+
+# information of each codon information from the middle layer/db
+e1) codon (codon_usage table)
+e2) frequency_100 (codon_usage table)
+e3) ratio_aa (codon_usage table)
+e4) amino_acid (codon_usage table)
+
+if the option of a known restriction enzyme is selected from DB
+
+f1) name (restriction_enzyme table)
+f2) recogn_seq (restriction_enzyme table)
+f3) start_position (restriction_sites)
+f4) ehd_position (restriction_sites)
+
+# from middle layer
+
+g1) whole_seq (cds table) with locations of restriction_sites
+g2)	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
+	but none within the cds. indicating it is useful for cutting the genes
