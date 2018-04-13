@@ -38,9 +38,14 @@ v 1.1 02/04/2018
 
 - start_position (restriction_sites) 
 
+----------------------------------------------------------------------
+1.2 Additional info that may be added
+----------------------------------------------------------------------
+- the start and end location of cds in relation to the whole seq
+
 
 --------------------------------------------------------------------
-1.2 Different page types 
+2.0 Different page types 
 --------------------------------------------------------------------
  _ _ _ _ _ _ _ _ _ _ _
 |                    |
@@ -55,11 +60,9 @@ a4) accession_num (accession table)
 
 b1) gene_name (cds table)
 b2) product_id (cds table)
-b3) product_name (cds table) # if there is one
-b4) translation (cds table)
-b5) seq_location (cds table) # if we could get a database entry 
-that contains the start and end points of a cds 
-		
+b3) translation (cds table)
+b4) seq_location (cds table) # if we could get a database entry 
+that contains the start and end points of a cds 	
 
 # information of each codon information from the middle layer/db
 c1) codon (codon_usage table)
@@ -133,8 +136,6 @@ f4) ehd_position (restriction_sites)
 # from middle layer
 
 g1) whole_seq (cds table) with locations of restriction_sites
-g2)	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
-	but none within the cds. indicating it is useful for cutting the genes
 
 
  _ _ _ _ _ _ _ _ _ _ _
@@ -182,5 +183,4 @@ f4) ehd_position (restriction_sites)
 # from middle layer
 
 g1) whole_seq (cds table) with locations of restriction_sites
-g2)	a special response (e.g useful = true) if there are upstream 5' and downstream 3' cut sites
-	but none within the cds. indicating it is useful for cutting the genes
+

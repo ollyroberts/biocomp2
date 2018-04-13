@@ -30,6 +30,7 @@ genetic material of an organism. Most eukaryotic chromosomes
 
 
 <section>
+<form action="cgi.py" method="GET">
 <fieldset> 
 
 <p>
@@ -45,20 +46,16 @@ genetic material of an organism. Most eukaryotic chromosomes
 </p>
 
 <p>
-  <legend> Search type</legend>
-  <label> enter your search type</label>
-  <input type ="text" name = "type" list="type" />
-  <datalist id="type">
-  <option value="gene">
-  <option value="protein">
-  <option value="accession">
-  <option value="location">
-  </datalist>
+  <input type="radio" name="type" value="0"> Gene<br>
+  <input type="radio" name="type" value="1"> Protein ID<br>
+  <input type="radio" name="type" value="2"> Genbank accession number<br>
+  <input type="radio" name="type" value="3"> Cytogenetic location<br>
 </p>
 
 <input type="submit" value="Submit">
 
 </fieldset>
+</form>
 </section>
 
 
